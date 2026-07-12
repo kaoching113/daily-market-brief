@@ -310,8 +310,8 @@ body {{
 }}
 .data-table {{
   display: grid;
-  grid-template-columns: 1fr;
-  column-gap: 14px;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 10px;
 }}
 .row {{
   padding: 6px 4px;
@@ -326,37 +326,38 @@ body {{
   background: var(--accent-soft);
   outline: none;
 }}
-.row:last-child {{
+.row:nth-last-child(-n+2) {{
   border-bottom: none;
 }}
 .row-top {{
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  gap: 8px;
+  gap: 4px;
+  flex-wrap: wrap;
 }}
 .row-bottom {{
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  gap: 8px;
+  gap: 4px;
   margin-top: 1px;
 }}
 .row-name {{
-  font-size: 12px;
+  font-size: 11.5px;
   font-weight: 600;
   min-width: 0;
 }}
 .row-symbol {{
   font-family: ui-monospace, "SF Mono", "Roboto Mono", monospace;
-  font-size: 9px;
+  font-size: 8.5px;
   font-weight: 400;
   color: var(--muted);
 }}
 .row-price {{
   font-family: ui-monospace, "SF Mono", "Roboto Mono", monospace;
   font-variant-numeric: tabular-nums;
-  font-size: 14px;
+  font-size: 12.5px;
   font-weight: 600;
   text-align: right;
   white-space: nowrap;
@@ -558,17 +559,16 @@ footer {{
   color: var(--muted);
   font-size: 12.5px;
 }}
-@media (min-width: 480px) {{
-  .data-table {{ grid-template-columns: repeat(2, 1fr); }}
-  .data-table .row {{ border-bottom: 1px solid var(--border); }}
-  .data-table .row:nth-last-child(-n+2) {{ border-bottom: none; }}
-}}
 @media (min-width: 860px) {{
   .wrap {{ padding: 32px 28px 36px; }}
   .masthead h1 {{ font-size: 28px; }}
   .masthead {{ padding-bottom: 16px; margin-bottom: 22px; }}
   .main-grid {{ grid-template-columns: 0.86fr 1.14fr; gap: 28px; }}
   .news-title {{ font-size: 18px; }}
+  .data-table {{ column-gap: 14px; }}
+  .row-name {{ font-size: 12px; }}
+  .row-symbol {{ font-size: 9px; }}
+  .row-price {{ font-size: 14px; }}
 }}
 </style>
 <div class="wrap">
