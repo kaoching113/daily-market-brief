@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-14 21:00",
+  "updatedAt": "2026-07-14 21:35",
   "items": [
     {
       "group": "股市指數",
@@ -25,30 +25,30 @@
       "group": "股市指數",
       "name": "小道瓊",
       "symbol": "YM=F",
-      "price": 52645.0,
+      "price": 52705.0,
       "previousClose": 52764.0,
-      "change": -119.0,
-      "changePercent": -0.22553256007884162,
+      "change": -59.0,
+      "changePercent": -0.11181866424077024,
       "currency": "USD"
     },
     {
       "group": "股市指數",
       "name": "小那斯達克",
       "symbol": "NQ=F",
-      "price": 29797.25,
+      "price": 29804.25,
       "previousClose": 29475.75,
-      "change": 321.5,
-      "changePercent": 1.090727123143601,
+      "change": 328.5,
+      "changePercent": 1.1144754586397294,
       "currency": "USD"
     },
     {
       "group": "股市指數",
       "name": "德國DAX",
       "symbol": "^GDAXI",
-      "price": 24979.55,
+      "price": 25001.86,
       "previousClose": 25114.25,
-      "change": -134.70000000000073,
-      "changePercent": -0.5363488855928437,
+      "change": -112.38999999999942,
+      "changePercent": -0.4475148571030368,
       "currency": "EUR"
     },
     {
@@ -65,60 +65,60 @@
       "group": "商品",
       "name": "黃金",
       "symbol": "GC=F",
-      "price": 4089.8,
+      "price": 4090.9,
       "previousClose": 4005.7,
-      "change": 84.10000000000036,
-      "changePercent": 2.0995082008138497,
+      "change": 85.20000000000027,
+      "changePercent": 2.126969069076573,
       "currency": "USD"
     },
     {
       "group": "商品",
       "name": "輕原油",
       "symbol": "CL=F",
-      "price": 80.86,
+      "price": 79.95,
       "previousClose": 78.14,
-      "change": 2.719999999999999,
-      "changePercent": 3.4809316611210632,
+      "change": 1.8100000000000023,
+      "changePercent": 2.3163552597901234,
       "currency": "USD"
     },
     {
       "group": "匯率",
       "name": "美元",
       "symbol": "TWD=X",
-      "price": 32.125,
+      "price": 32.115,
       "previousClose": 32.171,
-      "change": -0.045999999999999375,
-      "changePercent": -0.14298591899536656,
+      "change": -0.055999999999997385,
+      "changePercent": -0.17406981442913613,
       "currency": "TWD"
     },
     {
       "group": "匯率",
       "name": "歐元",
       "symbol": "EURTWD=X",
-      "price": 36.802,
+      "price": 36.807,
       "previousClose": 36.666,
-      "change": 0.13600000000000279,
-      "changePercent": 0.37091583483336826,
+      "change": 0.14100000000000534,
+      "changePercent": 0.38455244640813113,
       "currency": "TWD"
     },
     {
       "group": "匯率",
       "name": "人民幣",
       "symbol": "CNYTWD=X",
-      "price": 4.7491,
+      "price": 4.7476,
       "previousClose": 4.7483,
-      "change": 0.0007999999999999119,
-      "changePercent": 0.01684813512204182,
+      "change": -0.000700000000000145,
+      "changePercent": -0.01474211823179127,
       "currency": "TWD"
     },
     {
       "group": "匯率",
       "name": "比特幣",
       "symbol": "BTC-USD",
-      "price": 63816.86,
+      "price": 63750.42,
       "previousClose": 62259.16,
-      "change": 1557.699999999997,
-      "changePercent": 2.501961157201602,
+      "change": 1491.2599999999948,
+      "changePercent": 2.395245936501544,
       "currency": "USD"
     }
   ]
