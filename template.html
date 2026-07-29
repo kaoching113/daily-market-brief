@@ -1,0 +1,553 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>市場晨報</title>
+<style>
+:root {{
+{light_vars}}}
+@media (prefers-color-scheme: dark) {{
+  :root {{
+{dark_vars}  }}
+}}
+:root[data-theme="dark"] {{
+{dark_vars}}}
+:root[data-theme="light"] {{
+{light_vars}}}
+* {{ box-sizing: border-box; }}
+body {{
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}}
+.wrap {{
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 22px 20px 28px;
+}}
+.masthead {{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 12px;
+  flex-wrap: wrap;
+  border-bottom: 2px solid var(--ink);
+  padding-bottom: 10px;
+  margin-bottom: 16px;
+}}
+.masthead .eyebrow {{
+  color: var(--accent);
+}}
+.masthead h1 {{
+  margin: 2px 0 0;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}}
+.byline {{
+  font-size: 12.5px;
+  font-weight: 400;
+  color: var(--muted);
+  margin-left: 8px;
+  letter-spacing: 0;
+}}
+.updated {{
+  text-align: right;
+  font-family: ui-monospace, "SF Mono", "Roboto Mono", monospace;
+  font-size: 11px;
+  color: var(--muted);
+  line-height: 1.5;
+}}
+.updated strong {{
+  display: block;
+  color: var(--ink);
+  font-size: 12.5px;
+  font-weight: 600;
+}}
+.eyebrow {{
+  font-family: ui-monospace, "SF Mono", "Roboto Mono", monospace;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}}
+.main-grid {{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 22px;
+  align-items: start;
+}}
+.group-head {{
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 6px;
+}}
+.group-head h2 {{
+  margin: 0;
+  font-size: 13.5px;
+  font-weight: 700;
+}}
+.data-column {{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}}
+.data-group {{
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 12px 4px;
+}}
+.data-table {{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 10px;
+}}
+.row {{
+  padding: 6px 4px;
+  margin: 0 -4px;
+  border-bottom: 1px solid var(--border);
+  min-width: 0;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.12s ease;
+}}
+.row:hover, .row:focus-visible {{
+  background: var(--accent-soft);
+  outline: none;
+}}
+.row:nth-last-child(-n+2) {{
+  border-bottom: none;
+}}
+.row-top {{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 4px;
+  flex-wrap: wrap;
+}}
+.row-bottom {{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 4px;
+  margin-top: 1px;
+}}
+.row-name {{
+  font-size: 11.5px;
+  font-weight: 600;
+  min-width: 0;
+}}
+.row-symbol {{
+  font-family: ui-monospace, "SF Mono", "Roboto Mono", monospace;
+  font-size: 8.5px;
+  font-weight: 400;
+  color: var(--muted);
+}}
+.row-price {{
+  font-family: ui-monospace, "SF Mono", "Roboto Mono", monospace;
+  font-variant-numeric: tabular-nums;
+  font-size: 12.5px;
+  font-weight: 600;
+  text-align: right;
+  white-space: nowrap;
+  flex-shrink: 0;
+}}
+.row-price.muted {{
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--muted);
+}}
+.row-currency {{
+  font-size: 9.5px;
+  font-weight: 400;
+  color: var(--muted);
+  margin-left: 3px;
+}}
+.row-change {{
+  font-family: ui-monospace, "SF Mono", "Roboto Mono", monospace;
+  font-variant-numeric: tabular-nums;
+  font-size: 11px;
+  font-weight: 600;
+  text-align: right;
+  white-space: nowrap;
+  flex-shrink: 0;
+}}
+.row-change.rise {{ color: var(--rise); }}
+.row-change.fall {{ color: var(--fall); }}
+.row-change.flat {{ color: var(--muted); }}
+.row-pct {{
+  font-size: 10px;
+  font-weight: 600;
+  opacity: 0.85;
+}}
+.news-column {{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}}
+.news-group {{
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px 14px;
+}}
+.news-list {{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}}
+.news-item {{
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}}
+.news-item:last-child {{
+  border-bottom: none;
+  padding-bottom: 0;
+}}
+.news-title {{
+  display: block;
+  color: var(--ink);
+  font-size: 16.5px;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: -0.005em;
+  text-decoration: none;
+}}
+.news-title:hover {{
+  color: var(--accent);
+  text-decoration: underline;
+}}
+.news-meta {{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+}}
+.news-source {{
+  font-family: ui-monospace, "SF Mono", "Roboto Mono", monospace;
+  font-size: 10.5px;
+  color: var(--muted);
+}}
+.lang-tag {{
+  font-size: 10px;
+  color: var(--accent);
+  background: var(--accent-soft);
+  padding: 1px 6px;
+  border-radius: 999px;
+}}
+.note-toggle {{
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  width: 100%;
+  margin-top: 8px;
+  padding: 7px 9px;
+  background: var(--accent-soft);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+}}
+.note-icon {{
+  flex-shrink: 0;
+  font-size: 12px;
+}}
+.note-teaser {{
+  flex: 1;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--accent);
+  line-height: 1.4;
+}}
+.note-arrow {{
+  flex-shrink: 0;
+  font-size: 10.5px;
+  color: var(--muted);
+  white-space: nowrap;
+}}
+.note-toggle[aria-expanded="true"] .note-arrow {{
+  display: none;
+}}
+.note-body {{
+  margin-top: 6px;
+  padding: 10px 12px;
+  background: var(--bg);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 6px 6px 0;
+  font-size: 12.5px;
+  line-height: 1.7;
+  color: var(--ink);
+}}
+footer {{
+  border-top: 1px solid var(--border);
+  padding-top: 10px;
+  margin-top: 16px;
+  color: var(--muted);
+  font-size: 10.5px;
+  line-height: 1.6;
+}}
+.modal-overlay {{
+  position: fixed;
+  inset: 0;
+  background: var(--overlay);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 100;
+}}
+.modal-overlay[hidden] {{ display: none; }}
+.modal-box {{
+  background: var(--surface);
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  width: 100%;
+  max-width: 620px;
+  max-height: 90vh;
+  overflow: auto;
+  padding: 18px 20px 20px;
+}}
+.modal-head {{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 4px;
+}}
+.modal-title {{
+  font-size: 16px;
+  font-weight: 700;
+}}
+.modal-symbol {{
+  font-family: ui-monospace, "SF Mono", "Roboto Mono", monospace;
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 2px;
+}}
+.modal-close {{
+  background: none;
+  border: none;
+  font-size: 20px;
+  line-height: 1;
+  color: var(--muted);
+  cursor: pointer;
+  padding: 4px;
+}}
+.modal-close:hover {{ color: var(--ink); }}
+.modal-range {{
+  font-size: 10.5px;
+  color: var(--muted);
+  margin: 4px 0 10px;
+}}
+.modal-empty {{
+  padding: 40px 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: 12.5px;
+}}
+@media (min-width: 860px) {{
+  .wrap {{ padding: 32px 28px 36px; }}
+  .masthead h1 {{ font-size: 28px; }}
+  .masthead {{ padding-bottom: 16px; margin-bottom: 22px; }}
+  .main-grid {{ grid-template-columns: 0.86fr 1.14fr; gap: 28px; }}
+  .news-title {{ font-size: 18px; }}
+  .data-table {{ column-gap: 14px; }}
+  .row-name {{ font-size: 12px; }}
+  .row-symbol {{ font-size: 9px; }}
+  .row-price {{ font-size: 14px; }}
+}}
+</style>
+<div class="wrap">
+  <div class="masthead">
+    <div>
+      <span class="eyebrow">DAILY MARKET BRIEF</span>
+      <h1>市場晨報<span class="byline">By 高敬</span></h1>
+    </div>
+    <div class="updated">
+      <strong>{updated_at}</strong>
+      台灣時間・每日更新
+    </div>
+  </div>
+
+  <div class="main-grid">
+    <div class="data-column">
+      {sections}
+    </div>
+    <div class="news-column">
+      {news_section}
+    </div>
+  </div>
+
+  <footer>
+    市場數據來源：Yahoo Finance 公開報價；新聞來源列於各篇標題下方，每日台灣時間早上 7:00 自動更新一次。
+    內容僅供市場觀察與內容參考，不構成投資建議。點擊各項數據可查看近半年走勢圖。
+  </footer>
+</div>
+
+<div class="modal-overlay" id="chart-modal" hidden>
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-head">
+      <div>
+        <div class="modal-title" id="modal-title">—</div>
+        <div class="modal-symbol" id="modal-symbol">—</div>
+      </div>
+      <button class="modal-close" id="modal-close" type="button" aria-label="關閉">✕</button>
+    </div>
+    <div class="modal-range">近 6 個月走勢（日K）</div>
+    <div id="modal-chart-area"></div>
+  </div>
+</div>
+
+<script>
+const HISTORY = {history_json};
+
+(function() {{
+  var overlay = document.getElementById('chart-modal');
+  var closeBtn = document.getElementById('modal-close');
+  var titleEl = document.getElementById('modal-title');
+  var symbolEl = document.getElementById('modal-symbol');
+  var chartArea = document.getElementById('modal-chart-area');
+
+  function closeModal() {{
+    overlay.hidden = true;
+  }}
+
+  function openModal(symbol, name) {{
+    titleEl.textContent = name;
+    symbolEl.textContent = symbol;
+    var candles = HISTORY[symbol] || [];
+    chartArea.innerHTML = '';
+    if (candles.length < 15) {{
+      var empty = document.createElement('div');
+      empty.className = 'modal-empty';
+      empty.textContent = '近期歷史資料不足，暫無法繪製走勢圖。';
+      chartArea.appendChild(empty);
+    }} else {{
+      chartArea.appendChild(renderCandles(candles));
+    }}
+    overlay.hidden = false;
+  }}
+
+  function renderCandles(candles) {{
+    var w = 580, h = 260, padL = 52, padR = 10, padT = 10, padB = 24;
+    var plotW = w - padL - padR, plotH = h - padT - padB;
+    var lows = candles.map(function(c) {{ return c.l; }});
+    var highs = candles.map(function(c) {{ return c.h; }});
+    var min = Math.min.apply(null, lows);
+    var max = Math.max.apply(null, highs);
+    var range = (max - min) || 1;
+    var n = candles.length;
+    var slot = plotW / n;
+    var candleW = Math.max(1.5, Math.min(7, slot * 0.6));
+
+    function y(v) {{
+      return padT + (1 - (v - min) / range) * plotH;
+    }}
+
+    var ns = 'http://www.w3.org/2000/svg';
+    var svg = document.createElementNS(ns, 'svg');
+    svg.setAttribute('viewBox', '0 0 ' + w + ' ' + h);
+    svg.setAttribute('width', '100%');
+    svg.style.display = 'block';
+    var gridColor = getComputedStyle(document.body).getPropertyValue('--border').trim();
+    var textColor = getComputedStyle(document.body).getPropertyValue('--muted').trim();
+    var riseColor = getComputedStyle(document.body).getPropertyValue('--rise').trim();
+    var fallColor = getComputedStyle(document.body).getPropertyValue('--fall').trim();
+
+    [0, 0.25, 0.5, 0.75, 1].forEach(function(t) {{
+      var yy = padT + t * plotH;
+      var line = document.createElementNS(ns, 'line');
+      line.setAttribute('x1', padL); line.setAttribute('x2', w - padR);
+      line.setAttribute('y1', yy); line.setAttribute('y2', yy);
+      line.setAttribute('stroke', gridColor);
+      line.setAttribute('stroke-width', '1');
+      svg.appendChild(line);
+      var label = document.createElementNS(ns, 'text');
+      var val = max - t * range;
+      label.setAttribute('x', 4);
+      label.setAttribute('y', yy + 3);
+      label.setAttribute('font-size', '9');
+      label.setAttribute('fill', textColor);
+      label.setAttribute('font-family', 'ui-monospace, monospace');
+      label.textContent = val >= 1000 ? val.toFixed(0) : val.toFixed(2);
+      svg.appendChild(label);
+    }});
+
+    candles.forEach(function(c, i) {{
+      var cx = padL + slot * i + slot / 2;
+      var color = c.c >= c.o ? riseColor : fallColor;
+      var wick = document.createElementNS(ns, 'line');
+      wick.setAttribute('x1', cx); wick.setAttribute('x2', cx);
+      wick.setAttribute('y1', y(c.h)); wick.setAttribute('y2', y(c.l));
+      wick.setAttribute('stroke', color);
+      wick.setAttribute('stroke-width', '1');
+      svg.appendChild(wick);
+      var bodyTop = y(Math.max(c.o, c.c));
+      var bodyH = Math.max(1, Math.abs(y(c.o) - y(c.c)));
+      var rect = document.createElementNS(ns, 'rect');
+      rect.setAttribute('x', cx - candleW / 2);
+      rect.setAttribute('y', bodyTop);
+      rect.setAttribute('width', candleW);
+      rect.setAttribute('height', bodyH);
+      rect.setAttribute('fill', color);
+      svg.appendChild(rect);
+    }});
+
+    var monthSeen = {{}};
+    candles.forEach(function(c, i) {{
+      var d = new Date(c.t * 1000);
+      var key = d.getFullYear() + '-' + d.getMonth();
+      if (!monthSeen[key]) {{
+        monthSeen[key] = true;
+        var cx = padL + slot * i + slot / 2;
+        var label = document.createElementNS(ns, 'text');
+        label.setAttribute('x', cx);
+        label.setAttribute('y', h - 6);
+        label.setAttribute('font-size', '9');
+        label.setAttribute('fill', textColor);
+        label.setAttribute('font-family', 'ui-monospace, monospace');
+        label.setAttribute('text-anchor', 'middle');
+        label.textContent = (d.getMonth() + 1) + '月';
+        svg.appendChild(label);
+      }}
+    }});
+
+    return svg;
+  }}
+
+  document.querySelectorAll('.row[data-symbol]').forEach(function(row) {{
+    row.addEventListener('click', function() {{
+      openModal(row.getAttribute('data-symbol'), row.getAttribute('data-name'));
+    }});
+    row.addEventListener('keydown', function(e) {{
+      if (e.key === 'Enter' || e.key === ' ') {{
+        e.preventDefault();
+        openModal(row.getAttribute('data-symbol'), row.getAttribute('data-name'));
+      }}
+    }});
+  }});
+
+  closeBtn.addEventListener('click', closeModal);
+  overlay.addEventListener('click', function(e) {{
+    if (e.target === overlay) closeModal();
+  }});
+  document.addEventListener('keydown', function(e) {{
+    if (e.key === 'Escape') closeModal();
+  }});
+
+  document.querySelectorAll('.note-toggle').forEach(function(btn) {{
+    btn.addEventListener('click', function() {{
+      var target = document.getElementById(btn.getAttribute('data-target'));
+      var expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      target.hidden = expanded;
+    }});
+  }});
+}})();
+</script>

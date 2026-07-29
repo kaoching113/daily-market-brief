@@ -1,21 +1,9 @@
 #!/usr/bin/env python3
 import json
-import urllib.request
-import urllib.parse
-
-SYMBOLS = [
-    "^TWII", "XIN9.FGI", "YM=F", "NQ=F", "^GDAXI", "^HSI",
-    "GC=F", "CL=F", "TWD=X", "EURTWD=X", "CNYTWD=X", "BTC-USD",
-]
+from market_data import SYMBOLS, yahoo_fetch
 
 def fetch_history(symbol, range_="6mo", interval="1d"):
-    url = (
-        f"https://query1.finance.yahoo.com/v8/finance/chart/{urllib.parse.quote(symbol)}"
-        f"?range={range_}&interval={interval}"
-    )
-    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-    with urllib.request.urlopen(req, timeout=10) as resp:
-        data = json.load(resp)
+    data = yahoo_fetch(symbol, {"range": range_, "interval": interval})
     result = data["chart"]["result"][0]
     timestamps = result["timestamp"]
     quote = result["indicators"]["quote"][0]
