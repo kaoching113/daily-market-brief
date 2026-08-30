@@ -1,14 +1,14 @@
 {
-  "updatedAt": "2026-08-29 08:08",
+  "updatedAt": "2026-08-30 09:49",
   "items": [
     {
       "group": "股市指數",
       "name": "台灣加權指數",
       "symbol": "^TWII",
       "price": 46331.45,
-      "previousClose": 45832.6,
-      "change": 498.84999999999854,
-      "changePercent": 1.0884174146786318,
+      "previousClose": 45975.22,
+      "change": 356.2299999999959,
+      "changePercent": 0.774830441268135,
       "currency": "TWD"
     },
     {
@@ -25,20 +25,20 @@
       "group": "股市指數",
       "name": "小道瓊",
       "symbol": "YM=F",
-      "price": 53590.0,
+      "price": 53584.0,
       "previousClose": 53621.0,
-      "change": -31.0,
-      "changePercent": -0.057813170213162755,
+      "change": -37.0,
+      "changePercent": -0.06900281606087168,
       "currency": "USD"
     },
     {
       "group": "股市指數",
       "name": "小那斯達克",
       "symbol": "NQ=F",
-      "price": 29509.5,
+      "price": 29491.75,
       "previousClose": 29695.75,
-      "change": -186.25,
-      "changePercent": -0.6271941271057306,
+      "change": -204.0,
+      "changePercent": -0.686966990225874,
       "currency": "USD"
     },
     {
@@ -46,9 +46,9 @@
       "name": "德國DAX",
       "symbol": "^GDAXI",
       "price": 26569.99,
-      "previousClose": 26367.24,
-      "change": 202.75,
-      "changePercent": 0.7689466170899949,
+      "previousClose": 26367.2,
+      "change": 202.79000000000087,
+      "changePercent": 0.7690994872417278,
       "currency": "EUR"
     },
     {
@@ -56,29 +56,29 @@
       "name": "恆生指數",
       "symbol": "^HSI",
       "price": 25584.79,
-      "previousClose": 25653.0,
-      "change": -68.20999999999913,
-      "changePercent": -0.2658948271157336,
+      "previousClose": 25565.7,
+      "change": 19.090000000000146,
+      "changePercent": 0.07467035911396967,
       "currency": "HKD"
     },
     {
       "group": "商品",
       "name": "黃金",
       "symbol": "GC=F",
-      "price": 4504.1,
+      "price": 4529.9,
       "previousClose": 4664.0,
-      "change": -159.89999999999964,
-      "changePercent": -3.4283876500857553,
+      "change": -134.10000000000036,
+      "changePercent": -2.875214408233284,
       "currency": "USD"
     },
     {
       "group": "商品",
       "name": "輕原油",
       "symbol": "CL=F",
-      "price": 83.44,
+      "price": 83.4,
       "previousClose": 83.53,
-      "change": -0.09000000000000341,
-      "changePercent": -0.10774572010056677,
+      "change": -0.12999999999999545,
+      "changePercent": -0.1556327068119184,
       "currency": "USD"
     },
     {
@@ -115,10 +115,10 @@
       "group": "匯率",
       "name": "比特幣",
       "symbol": "BTC-USD",
-      "price": 77870.41,
-      "previousClose": 77838.39,
-      "change": 32.020000000004075,
-      "changePercent": 0.041136513743416425,
+      "price": 78108.31,
+      "previousClose": 78234.75,
+      "change": -126.44000000000233,
+      "changePercent": -0.1616161616161646,
       "currency": "USD"
     }
   ]
