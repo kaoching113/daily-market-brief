@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-24 09:09",
+  "updatedAt": "2026-10-25 07:32",
   "items": [
     {
       "group": "股市指數",
@@ -25,20 +25,20 @@
       "group": "股市指數",
       "name": "小道瓊",
       "symbol": "YM=F",
-      "price": 52451.0,
+      "price": 52394.0,
       "previousClose": 53068.0,
-      "change": -617.0,
-      "changePercent": -1.1626592296675964,
+      "change": -674.0,
+      "changePercent": -1.270068591241426,
       "currency": "USD"
     },
     {
       "group": "股市指數",
       "name": "小那斯達克",
       "symbol": "NQ=F",
-      "price": 29175.0,
+      "price": 29117.75,
       "previousClose": 29142.0,
-      "change": 33.0,
-      "changePercent": 0.11323862466543133,
+      "change": -24.25,
+      "changePercent": -0.08321323176171848,
       "currency": "USD"
     },
     {
@@ -56,29 +56,29 @@
       "name": "恆生指數",
       "symbol": "^HSI",
       "price": 23093.37,
-      "previousClose": 22934.68,
-      "change": 158.6899999999987,
-      "changePercent": 0.6919215790235517,
+      "previousClose": 22934.7,
+      "change": 158.66999999999825,
+      "changePercent": 0.6918337715339562,
       "currency": "HKD"
     },
     {
       "group": "商品",
       "name": "黃金",
       "symbol": "GC=F",
-      "price": 4010.0,
+      "price": 4007.9,
       "previousClose": 4060.4,
-      "change": -50.40000000000009,
-      "changePercent": -1.2412570190129073,
+      "change": -52.5,
+      "changePercent": -1.292976061471776,
       "currency": "USD"
     },
     {
       "group": "商品",
       "name": "輕原油",
       "symbol": "CL=F",
-      "price": 103.44,
+      "price": 103.27,
       "previousClose": 99.47,
-      "change": 3.969999999999999,
-      "changePercent": 3.9911531114909007,
+      "change": 3.799999999999997,
+      "changePercent": 3.8202473107469563,
       "currency": "USD"
     },
     {
@@ -115,10 +115,10 @@
       "group": "匯率",
       "name": "比特幣",
       "symbol": "BTC-USD",
-      "price": 80632.32,
+      "price": 80619.58,
       "previousClose": 81079.98,
-      "change": -447.65999999998894,
-      "changePercent": -0.5521214978099267,
+      "change": -460.3999999999942,
+      "changePercent": -0.5678343778575108,
       "currency": "USD"
     }
   ]
