@@ -1,14 +1,14 @@
 {
-  "updatedAt": "2026-10-31 09:07",
+  "updatedAt": "2026-10-31 09:20",
   "items": [
     {
       "group": "股市指數",
       "name": "台灣加權指數",
       "symbol": "^TWII",
       "price": 45211.83,
-      "previousClose": 47035.6,
-      "change": -1823.7699999999968,
-      "changePercent": -3.877424759118618,
+      "previousClose": 46368.328125,
+      "change": -1156.4981249999983,
+      "changePercent": -2.4941553249069153,
       "currency": "TWD"
     },
     {
@@ -46,9 +46,9 @@
       "name": "德國DAX",
       "symbol": "^GDAXI",
       "price": 25818.21,
-      "previousClose": 26039.68,
-      "change": -221.47000000000116,
-      "changePercent": -0.8505096836827533,
+      "previousClose": 26039.6796875,
+      "change": -221.46968750000087,
+      "changePercent": -0.8505084937980802,
       "currency": "EUR"
     },
     {
@@ -56,9 +56,9 @@
       "name": "恆生指數",
       "symbol": "^HSI",
       "price": 23294.42,
-      "previousClose": 23094.8,
-      "change": 199.61999999999898,
-      "changePercent": 0.8643504165439795,
+      "previousClose": 22958.650390625,
+      "change": 335.76960937499825,
+      "changePercent": 1.4624971575511572,
       "currency": "HKD"
     },
     {
@@ -115,10 +115,10 @@
       "group": "匯率",
       "name": "比特幣",
       "symbol": "BTC-USD",
-      "price": 77393.08,
+      "price": 77381.12,
       "previousClose": 77202.4,
-      "change": 190.68000000000757,
-      "changePercent": 0.24698714029616642,
+      "change": 178.72000000000116,
+      "changePercent": 0.23149539392557897,
       "currency": "USD"
     }
   ]

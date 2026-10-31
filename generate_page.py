@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import json
+import re
 import sys
 from pathlib import Path
 from urllib.parse import quote
@@ -118,12 +119,16 @@ def render_group(group_name, items):
 def translate_url(url):
     return f"https://translate.google.com/translate?sl=auto&tl=zh-TW&u={quote(url, safe='')}"
 
+def format_commentary(text):
+    text = text.replace("事實：", "<strong>事實：</strong>", 1)
+    return re.sub(r"\s*我的解讀：", "<br><strong>我的解讀：</strong>", text, count=1)
+
 def render_news_item(item, uid):
     lang = item.get("lang", "zh")
     href = translate_url(item["url"]) if lang == "en" else item["url"]
     tag = '<span class="lang-tag">英文・自動翻譯</span>' if lang == "en" else ""
     teaser = item.get("teaser", "")
-    commentary = item.get("commentary", "")
+    commentary = format_commentary(item.get("commentary", ""))
     note_html = ""
     if teaser and commentary:
         note_html = f"""
