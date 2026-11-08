@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-07 09:10",
+  "updatedAt": "2026-11-08 20:25",
   "items": [
     {
       "group": "股市指數",
@@ -25,20 +25,20 @@
       "group": "股市指數",
       "name": "小道瓊",
       "symbol": "YM=F",
-      "price": 51390.0,
+      "price": 51385.0,
       "previousClose": 51615.0,
-      "change": -225.0,
-      "changePercent": -0.4359197907585004,
+      "change": -230.0,
+      "changePercent": -0.4456068972198004,
       "currency": "USD"
     },
     {
       "group": "股市指數",
       "name": "小那斯達克",
       "symbol": "NQ=F",
-      "price": 27107.5,
+      "price": 27085.25,
       "previousClose": 26752.0,
-      "change": 355.5,
-      "changePercent": 1.3288726076555024,
+      "change": 333.25,
+      "changePercent": 1.2457012559808613,
       "currency": "USD"
     },
     {
@@ -65,20 +65,20 @@
       "group": "商品",
       "name": "黃金",
       "symbol": "GC=F",
-      "price": 4079.5,
+      "price": 4074.9,
       "previousClose": 4113.5,
-      "change": -34.0,
-      "changePercent": -0.8265467363559013,
+      "change": -38.59999999999991,
+      "changePercent": -0.9383736477452269,
       "currency": "USD"
     },
     {
       "group": "商品",
       "name": "輕原油",
       "symbol": "CL=F",
-      "price": 90.34,
+      "price": 90.83,
       "previousClose": 90.52,
-      "change": -0.1799999999999926,
-      "changePercent": -0.19885108263366394,
+      "change": 0.3100000000000023,
+      "changePercent": 0.34246575342466007,
       "currency": "USD"
     },
     {
@@ -115,10 +115,10 @@
       "group": "匯率",
       "name": "比特幣",
       "symbol": "BTC-USD",
-      "price": 75819.53,
-      "previousClose": 75741.016,
-      "change": 78.51399999999558,
-      "changePercent": 0.10366113916401064,
+      "price": 75856.99,
+      "previousClose": 75753.71,
+      "change": 103.27999999999884,
+      "changePercent": 0.13633655698182812,
       "currency": "USD"
     }
   ]
