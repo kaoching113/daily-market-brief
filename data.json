@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-08 20:25",
+  "updatedAt": "2026-11-09 08:08",
   "items": [
     {
       "group": "股市指數",
@@ -16,29 +16,29 @@
       "name": "中國A50",
       "symbol": "XIN9.FGI",
       "price": 12884.45,
-      "previousClose": 13092.37,
-      "change": -207.92000000000007,
-      "changePercent": -1.5881005501677699,
+      "previousClose": 13092.4,
+      "change": -207.9499999999989,
+      "changePercent": -1.5883260517552085,
       "currency": "CNY"
     },
     {
       "group": "股市指數",
       "name": "小道瓊",
       "symbol": "YM=F",
-      "price": 51385.0,
-      "previousClose": 51615.0,
-      "change": -230.0,
-      "changePercent": -0.4456068972198004,
+      "price": 51515.0,
+      "previousClose": 51385.0,
+      "change": 130.0,
+      "changePercent": 0.25299211832246765,
       "currency": "USD"
     },
     {
       "group": "股市指數",
       "name": "小那斯達克",
       "symbol": "NQ=F",
-      "price": 27085.25,
-      "previousClose": 26752.0,
-      "change": 333.25,
-      "changePercent": 1.2457012559808613,
+      "price": 27152.5,
+      "previousClose": 27085.25,
+      "change": 67.25,
+      "changePercent": 0.24829012100682107,
       "currency": "USD"
     },
     {
@@ -46,9 +46,9 @@
       "name": "德國DAX",
       "symbol": "^GDAXI",
       "price": 25820.36,
-      "previousClose": 26325.009765625,
-      "change": -504.6497656249994,
-      "changePercent": -1.916997448882117,
+      "previousClose": 26325.0,
+      "change": -504.6399999999994,
+      "changePercent": -1.9169610636277281,
       "currency": "EUR"
     },
     {
@@ -65,60 +65,56 @@
       "group": "商品",
       "name": "黃金",
       "symbol": "GC=F",
-      "price": 4074.9,
-      "previousClose": 4113.5,
-      "change": -38.59999999999991,
-      "changePercent": -0.9383736477452269,
+      "price": 4071.9,
+      "previousClose": 4074.9,
+      "change": -3.0,
+      "changePercent": -0.07362143856290952,
       "currency": "USD"
     },
     {
       "group": "商品",
       "name": "輕原油",
       "symbol": "CL=F",
-      "price": 90.83,
-      "previousClose": 90.52,
-      "change": 0.3100000000000023,
-      "changePercent": 0.34246575342466007,
+      "price": 90.42,
+      "previousClose": 90.83,
+      "change": -0.4099999999999966,
+      "changePercent": -0.45139271165913974,
       "currency": "USD"
     },
     {
       "group": "匯率",
       "name": "美元",
       "symbol": "TWD=X",
-      "price": 32.765,
+      "price": 32.766,
       "previousClose": 33.098,
-      "change": -0.3329999999999984,
-      "changePercent": -1.0061030877998622,
+      "change": -0.33200000000000074,
+      "changePercent": -1.0030817572058757,
       "currency": "TWD"
     },
     {
       "group": "匯率",
       "name": "歐元",
       "symbol": "EURTWD=X",
-      "price": 36.557,
+      "price": 36.569,
       "previousClose": 37.174,
-      "change": -0.6169999999999973,
-      "changePercent": -1.6597621993866611,
+      "change": -0.6049999999999969,
+      "changePercent": -1.6274815731425105,
       "currency": "TWD"
     },
     {
       "group": "匯率",
       "name": "人民幣",
       "symbol": "CNYTWD=X",
-      "price": 4.9128,
-      "previousClose": 4.9675,
-      "change": -0.054700000000000415,
-      "changePercent": -1.1011575239053935,
-      "currency": "TWD"
+      "error": "<urlopen error [Errno 54] Connection reset by peer>"
     },
     {
       "group": "匯率",
       "name": "比特幣",
       "symbol": "BTC-USD",
-      "price": 75856.99,
-      "previousClose": 75753.71,
-      "change": 103.27999999999884,
-      "changePercent": 0.13633655698182812,
+      "price": 74607.87,
+      "previousClose": 74719.82,
+      "change": -111.95000000001164,
+      "changePercent": -0.14982637806141882,
       "currency": "USD"
     }
   ]
