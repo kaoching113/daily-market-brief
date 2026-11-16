@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-14 07:44",
+  "updatedAt": "2026-11-15 08:13",
   "items": [
     {
       "group": "股市指數",
@@ -16,29 +16,29 @@
       "name": "中國A50",
       "symbol": "XIN9.FGI",
       "price": 12903.55,
-      "previousClose": 12981.41,
-      "change": -77.86000000000058,
-      "changePercent": -0.5997807634147645,
+      "previousClose": 12981.4,
+      "change": -77.85000000000036,
+      "changePercent": -0.5997041921518509,
       "currency": "CNY"
     },
     {
       "group": "股市指數",
       "name": "小道瓊",
       "symbol": "YM=F",
-      "price": 52347.0,
+      "price": 52418.0,
       "previousClose": 52390.0,
-      "change": -43.0,
-      "changePercent": -0.08207673220080168,
+      "change": 28.0,
+      "changePercent": 0.0534453139912197,
       "currency": "USD"
     },
     {
       "group": "股市指數",
       "name": "小那斯達克",
       "symbol": "NQ=F",
-      "price": 27927.25,
+      "price": 28034.75,
       "previousClose": 28384.5,
-      "change": -457.25,
-      "changePercent": -1.6109144075111417,
+      "change": -349.75,
+      "changePercent": -1.2321865807042576,
       "currency": "USD"
     },
     {
@@ -65,20 +65,20 @@
       "group": "商品",
       "name": "黃金",
       "symbol": "GC=F",
-      "price": 3887.6,
+      "price": 3886.3,
       "previousClose": 3885.3,
-      "change": 2.299999999999727,
-      "changePercent": 0.0591974879674601,
+      "change": 1.0,
+      "changePercent": 0.025738038246724833,
       "currency": "USD"
     },
     {
       "group": "商品",
       "name": "輕原油",
       "symbol": "CL=F",
-      "price": 88.92,
+      "price": 88.56,
       "previousClose": 88.74,
-      "change": 0.18000000000000682,
-      "changePercent": 0.2028397565922998,
+      "change": -0.1799999999999926,
+      "changePercent": -0.20283975659228376,
       "currency": "USD"
     },
     {
@@ -115,10 +115,10 @@
       "group": "匯率",
       "name": "比特幣",
       "symbol": "BTC-USD",
-      "price": 68097.93,
-      "previousClose": 71371.766,
-      "change": -3273.8360000000102,
-      "changePercent": -4.587018345601831,
+      "price": 64297.19,
+      "previousClose": 64119.78,
+      "change": 177.4100000000035,
+      "changePercent": 0.27668529118472257,
       "currency": "USD"
     }
   ]
